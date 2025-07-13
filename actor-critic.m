@@ -123,7 +123,7 @@ buffer.Reward = [];
 buffer.NextState = {};
 buffer.IsDone = [];
 
-max_num_episodes = 2000;
+max_num_episodes = 1000;
 max_step = 1000;
 print_interval = 10;
 scores_array = [];
