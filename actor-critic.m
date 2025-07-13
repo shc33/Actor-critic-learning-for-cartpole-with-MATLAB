@@ -58,11 +58,11 @@ function [gradients, loss] = modelGradients(net, buffer, nFeatures, discount_fac
     R = r + discount_factor * R;
     discounted_rewards = [R, discounted_rewards];
   end
-	std_discounted_rewards = std(discounted_rewards);
-	if std_discounted_rewards == 0
-		std_discoundte_rewards = eps;
-	end
-	discounted_rewards = (discounted_rewards - mean(discounted_rewards)) / std_discounted_rewards;
+  std_discounted_rewards = std(discounted_rewards);
+  if std_discounted_rewards == 0
+    std_discoundte_rewards = eps;
+  end
+  discounted_rewards = (discounted_rewards - mean(discounted_rewards)) / std_discounted_rewards;
   actor_loss = 0;
   for i = 1:length(log_probs)
       temp = -log_probs(i) * discounted_rewards(i);
