@@ -1,3 +1,4 @@
+% @author: SH Cho
 clear all; close all force; format compact
 
 function [env, nFeatures, nOutputs, success_threshold] = create_env()
